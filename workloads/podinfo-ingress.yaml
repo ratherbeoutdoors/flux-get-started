@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: podinfo-ingress
+  namespace: demo
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          serviceName: podinfo
+          servicePort: 9898
+    host: podinfo.52.252.78.16.nip.io
